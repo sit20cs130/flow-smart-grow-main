@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 214 95% 93%;
+    --primary-foreground: 214 84% 56%;
+    
+    --ai-blue: 214 84% 56%;
+    --ai-bg: 214 95% 93%;
+    --user-gray: 220 13% 91%;
+    --action: 142 76% 42%;
+    --action-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 142 76% 42%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 214 84% 56%;
+
+    --radius: 1rem;
+
+    --gradient-ai: linear-gradient(135deg, hsl(214 95% 93%), hsl(214 90% 90%));
+    --gradient-action: linear-gradient(135deg, hsl(142 76% 42%), hsl(142 76% 50%));
+    --gradient-hero: linear-gradient(135deg, hsl(214 95% 96%) 0%, hsl(142 76% 95%) 100%);
+    
+    --shadow-widget: 0 2px 8px 0 hsl(214 84% 56% / 0.12);
+    --shadow-card: 0 1px 3px 0 hsl(0 0% 0% / 0.1);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 271 91% 65%;
+    --primary-foreground: 0 0% 100%;
+    
+    --ai-blue: 271 91% 65%;
+    --ai-bg: 271 91% 15%;
+    --user-gray: 240 10% 15%;
+    --action: 177 100% 50%;
+    --action-foreground: 240 10% 3.9%;
+
+    --secondary: 240 10% 12%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 10% 15%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 177 100% 50%;
+    --accent-foreground: 240 10% 3.9%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 18%;
+    --input: 240 10% 15%;
+    --ring: 271 91% 65%;
+
+    --gradient-ai: linear-gradient(135deg, hsl(271 91% 15%), hsl(271 91% 20%));
+    --gradient-action: linear-gradient(135deg, hsl(177 100% 50%), hsl(177 100% 60%));
+    --gradient-hero: linear-gradient(135deg, hsl(240 10% 8%) 0%, hsl(271 91% 12%) 100%);
+    
+    --shadow-widget: 0 4px 12px 0 hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 8px 0 hsl(0 0% 0% / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "cv11", "ss01";
+  }
+  
+  .animate-balance {
+    animation: balance-pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes balance-pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  
+  .widget-card {
+    background: hsl(var(--card));
+    border: 1px solid hsl(var(--border));
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-widget);
+    transition: var(--transition-smooth);
+  }
+  
+  .widget-card:hover {
+    box-shadow: 0 4px 12px 0 hsl(214 84% 56% / 0.15);
+  }
+  
+  .chat-bubble-ai {
+    background: var(--gradient-ai);
+    border-radius: 1.25rem 1.25rem 1.25rem 0.25rem;
+  }
+  
+  .chat-bubble-user {
+    background: hsl(var(--user-gray));
+    border-radius: 1.25rem 1.25rem 0.25rem 1.25rem;
+  }
+  
+  .action-button {
+    background: var(--gradient-action);
+    transition: var(--transition-smooth);
+  }
+  
+  .action-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px hsl(142 76% 42% / 0.3);
+  }
+  
+  .bg-gradient-hero {
+    background: var(--gradient-hero);
+  }
+}

@@ -577,14 +577,6 @@ SolanaPayParserCard.tsx
 
 ---
 
-## 🛠️ Development Setup
-
-### Prerequisites
-
-- Node.js 18+
-- Phantom Wallet browser extension
-- Lovable account (for deployment)
-
 ### Installation
 
 ```bash
@@ -628,17 +620,6 @@ Project > Settings > Domains > Connect Domain
 
 ---
 
-## 📊 Future Enhancements
-
-- [ ] **Arcium Integration**: Private transactions for confidential payments
-- [ ] **Jupiter Aggregator**: Multi-DEX routing for best swap prices
-- [ ] **Recurring Savings**: Auto-sweep on deposit detection
-- [ ] **Social Payments**: Split bills with natural language ("Split $50 3 ways")
-- [ ] **Voice Interface**: Integrate with voice assistants
-- [ ] **Mobile App**: React Native port using Solana Mobile Stack
-
----
-
 ## 🤝 Contributing
 
 This project was built for the [Colosseum Hackathon]. Contributions welcome!
@@ -654,32 +635,6 @@ This project was built for the [Colosseum Hackathon]. Contributions welcome!
 ## 📝 License
 
 MIT License - See LICENSE file for details
-
----
-
-## 🙏 Acknowledgments
-
-**Sponsored Resources:**
-
-- **Phantom** - Wallet infrastructure
-- **Raydium** - Liquidity and swaps
-- **Reflect** - Interest-bearing stablecoins
-- **Triton** - High-performance RPC
-- **Lovable** - Full-stack platform and AI
-
-**Community:**
-
-- Solana Foundation
-- Colosseum Hackathon organizers
-- Open source contributors
-
----
-
-## 📞 Support
-
-- **Discord**: [Lovable Community](https://discord.com/channels/1119885301872070706/1280461670979993613)
-- **Docs**: [docs.lovable.dev](https://docs.lovable.dev/)
-- **Issues**: GitHub Issues tab
 
 ---
 
